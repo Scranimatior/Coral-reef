@@ -1,0 +1,155 @@
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #e0f7fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #00796b;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #004d40;
+            text-align: center;
+            padding: 10px;
+        }
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+        .tab-content {
+            padding: 20px;
+        }
+        .tab-content h2 {
+            color: #00796b;
+        }
+        .tab-content p {
+            font-size: 18px;
+        }
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            border-bottom: 2px solid #00796b;
+        }
+        .tab-button {
+            background-color: #e0f7fa;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        .tab-button:hover {
+            background-color: #00796b;
+            color: white;
+        }
+        .tab-button.active {
+            background-color: #00796b;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Protecting Coral Reefs by Aquaboys</h1>
+    </header>
+
+    <nav>
+        <a href="#problem-solution" class="tab-button active">Problem & Solution</a>
+        <a href="#aquaboys-plan" class="tab-button">Aquaboys' Plan</a>
+        <a href="#mbot2" class="tab-button">Mbot2</a>
+        <a href="#your-ideas" class="tab-button">Your Ideas</a>
+    </nav>
+
+    <div class="tab-content" id="problem-solution">
+        <h2>The Problem: Coral Reefs Under Threat</h2>
+        <p>
+            Coral reefs are some of the most biodiverse ecosystems in the world...
+        </p>
+    </div>
+
+    <div class="tab-content" id="aquaboys-plan" style="display:none;">
+        <h2>Our Vision: A Cleaner Ocean with Drones</h2>
+        <p>
+            Aquaboys is pioneering an innovative solution to protect coral reefs...
+        </p>
+    </div>
+
+    <div class="tab-content" id="mbot2" style="display:none;">
+        <h2>Mbot2: Revolutionizing Coral Reef Protection</h2>
+        <p>
+            The Mbot2 is a cutting-edge robotic platform developed to aid in coral reef protection efforts. Designed for flexibility, precision, and efficiency, this advanced robot can perform a variety of tasks to help mitigate the challenges faced by marine ecosystems. Equipped with state-of-the-art sensors, AI-driven navigation systems, and a robust, eco-friendly design, Mbot2 is central to the Aquaboys' vision of cleaner and healthier oceans.
+        </p>
+        
+        <h3>How Mbot2 Works</h3>
+        <p>
+            The Mbot2 operates both above and below the ocean surface, making it highly versatile for addressing coral reef threats. It is equipped with:
+            <ul>
+                <li><strong>Waste Detection Sensors:</strong> Identifies and collects microplastics, fishing nets, and other debris around coral reef ecosystems.</li>
+                <li><strong>Environmental Monitoring Tools:</strong> Measures water temperature, pH levels, and pollution concentrations to assess reef health.</li>
+                <li><strong>Algae Removal Mechanism:</strong> Removes harmful algae overgrowth that blocks sunlight and disrupts coral growth.</li>
+                <li><strong>AI-Assisted Navigation:</strong> Ensures safe and precise movements around delicate reef structures.</li>
+            </ul>
+        </p>
+
+        <h3>Mbot2’s Role in Coral Reef Protection</h3>
+        <p>
+            By utilizing the Mbot2, the Aquaboys aim to address specific threats to coral reefs. This robot prevents pollution from settling on reefs, minimizes damage caused by human intervention, and provides real-time data for ongoing conservation efforts. Its ability to operate autonomously over long periods ensures constant monitoring and maintenance of reef ecosystems.
+        </p>
+
+        <h3>Why Mbot2 is a Game-Changer</h3>
+        <p>
+            The Mbot2 stands out for its:
+            <ul>
+                <li><strong>Efficiency:</strong> Capable of cleaning large areas quickly and effectively.</li>
+                <li><strong>Eco-Friendliness:</strong> Powered by renewable energy sources, minimizing its carbon footprint.</li>
+                <li><strong>Data Collection:</strong> Provides invaluable insights to scientists and conservationists for better decision-making.</li>
+                <li><strong>Adaptability:</strong> Can be reprogrammed for specific tasks depending on the unique needs of different marine environments.</li>
+            </ul>
+        </p>
+
+        <p>
+            With Mbot2, Aquaboys are setting a new standard in marine conservation, making significant strides in protecting and revitalizing coral reefs for future generations.
+        </p>
+    </div>
+
+    <div class="tab-content" id="your-ideas" style="display:none;">
+        <h2>Share Your Ideas</h2>
+        <p>
+            At Aquaboys, we believe that collaboration is key to solving the challenges facing coral reefs...
+        </p>
+    </div>
+
+    <script>
+        // Tab switching functionality
+        const tabs = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs
+                tabs.forEach(t => t.classList.remove('active'));
+                // Hide all tab contents
+                tabContents.forEach(content => content.style.display = 'none');
+
+                // Add active class to the clicked tab
+                tab.classList.add('active');
+
+                // Show the corresponding content
+                const targetContent = document.querySelector(tab.getAttribute('href'));
+                targetContent.style.display = 'block';
+            });
+        });
+    </script>
+</body>
+</html>
